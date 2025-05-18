@@ -1,0 +1,124 @@
+.courses-page {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f5f8ff;
+}
+
+.sidebar {
+    width: 250px;
+    flex-shrink: 0;
+    margin-right: 0;
+}
+
+.courses-content {
+    flex-grow: 1;
+    padding: 2rem;
+    overflow-y: auto;
+    max-width: 100%;
+    margin: 0;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #222;
+}
+
+.courses-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.course-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.course-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.course-info {
+    padding: 1rem 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.course-info h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.short-desc {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.full-desc {
+    font-size: 0.9rem;
+    color: #444;
+    flex-grow: 1;
+    margin-bottom: 1rem;
+}
+
+.enroll-btn, .details-btn, .unenroll-btn {
+    align-self: flex-start;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.25s ease;
+}
+
+.enroll-btn {
+    background-color: #2d89ff;
+}
+
+.enroll-btn:hover {
+    background-color: #1a5ecc;
+}
+
+.details-btn {
+    background-color: #4caf50;
+}
+
+.details-btn:hover {
+    background-color: #3b8c3a;
+}
+
+.unenroll-btn {
+    background-color: #4caf50;
+}
+
+.unenroll-btn:hover {
+    background-color: #3b8c3a;
+}
+
+@media (max-width: 768px) {
+    .courses-content {
+        padding: 1rem;
+    }
+
+    .course-card {
+        flex-direction: column;
+    }
+}

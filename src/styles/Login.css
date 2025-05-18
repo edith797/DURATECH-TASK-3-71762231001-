@@ -1,0 +1,119 @@
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  
+    background-image: url('https://cdn.pixabay.com/photo/2016/11/18/16/20/children-1839265_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+    position: relative;
+  }
+  
+  .auth-page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+  }
+  
+  .auth-form {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2.5rem 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    max-width: 420px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    animation: fadeInUp 0.8s ease forwards;
+  }
+  
+  .auth-form h2 {
+    margin-bottom: 1.5rem;
+    color: #002147;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  .auth-form input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: 0.3s;
+  }
+  
+  .auth-form input:focus {
+    border-color: #003a70;
+    outline: none;
+    box-shadow: 0 0 6px #003a70aa;
+  }
+  
+  .auth-form button {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: #003a70;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 0.5rem;
+  }
+  
+  .auth-form button:hover {
+    background: #0051b8;
+  }
+  
+  .auth-form p {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: #444;
+  }
+  
+  .auth-form a {
+    color: #0051b8;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .auth-form a:hover {
+    text-decoration: underline;
+  }
+  
+  .error-msg {
+    background-color: #f8d7da;
+    color: #842029;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    text-align: left;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
